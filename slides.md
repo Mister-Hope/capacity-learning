@@ -204,8 +204,8 @@ layout: default
   <div class="flex items-center gap-2 mb-3"><mdi-lightbulb-on-outline class="text-accent text-xl" /><span class="font-semibold text-lg">放电</span></div>
   <v-clicks>
 
-  <div class="mb-2 text-sm">用导线连接两极板</div>
-  <div class="mb-2 text-sm">电子从<span class="text-accent-2">负极板</span>经导线流向<span class="text-red-400">正极板</span></div>
+  <div class="mb-2 text-sm">通过电路连接两极板</div>
+  <div class="mb-2 text-sm">电子从<span class="text-accent-2">负极板</span>经导线与电阻流向<span class="text-red-400">正极板</span></div>
   <div class="mb-2 text-sm">两极板电荷逐渐中和，<span class="text-accent">电势差降低</span></div>
 
   </v-clicks>
