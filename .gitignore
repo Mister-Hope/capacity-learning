@@ -1,0 +1,17 @@
+node_modules/
+dist/
+*.local
+.DS_Store
+.slidev/
+
+# 技能安装自动生成
+.agents/
+skills-lock.json
+
+# 个人本地配置
+.claude/settings.local.json
+
+# 临时截图
+preview-*.png
+debug-*.png
+cover-preview.png
