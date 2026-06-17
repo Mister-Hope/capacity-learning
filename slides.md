@@ -381,7 +381,9 @@ layout: default
 
 改变物体运动状态<span class="text-accent">难易</span>的本领
 
-$m = \dfrac{F}{a}$，通过衡量产生单位加速度的受力大小
+$m = \dfrac{F}{a}$
+
+衡量产生单位加速度的受力大小
 
   </div>
 </div>
@@ -392,7 +394,9 @@ $m = \dfrac{F}{a}$，通过衡量产生单位加速度的受力大小
 
 阻碍电流通过<span class="text-accent">难易</span>的本领
 
-$R = \dfrac{U}{I}$，通过衡量单位电流通过时两端的电压
+$R = \dfrac{U}{I}$
+
+衡量单位电流通过时电阻两端的电压
 
   </div>
 </div>
