@@ -92,32 +92,17 @@ layout: default
 
 <v-clicks>
 
-<div class="card card-highlight">
+<div class="card card-highlight mb-2">
   <div class="text-2xl font-semibold">
     定义：<span class="text-accent">相互靠近</span>且<span class="text-accent">彼此绝缘</span>的两个导体，构成电容器
   </div>
 </div>
 
-<div class="grid grid-cols-2 gap-3 mt-3">
-  <div class="card">
-    <div class="font-semibold text-lg">相互靠近</div>
-    <div class="text-sm opacity-50 mt-1">电荷相互吸引，不会流失</div>
-  </div>
-  <div class="card">
-    <div class="font-semibold text-lg">彼此绝缘</div>
-    <div class="text-sm opacity-50 mt-1">没有导电通路，电荷无法逃逸</div>
-  </div>
-</div>
+## 哪些东西可以看成电容器？
 
 </v-clicks>
 
----
-layout: default
----
-
-# 哪些东西可以看成电容器？
-
-<div class="grid grid-cols-2 gap-3 mt-6">
+<div class="grid grid-cols-2 gap-3 mt-2">
 
 <v-clicks>
 
@@ -216,7 +201,7 @@ layout: default
 <v-click>
 
 <div class="card card-highlight mt-4 text-center">
-  <span class="text-accent font-semibold">电荷守恒</span>：充电不是创造电荷，放电不是消灭电荷——只是<span class="text-accent-2">转移</span>
+  充电不是创造电荷，放电不是消灭电荷——过程中电荷通常在两极板间<span class="text-accent-2">转移</span>
 </div>
 
 </v-click>
@@ -235,11 +220,11 @@ layout: default
 <v-clicks>
 
 <div class="card mt-2 px-3 py-1.5">
-  <div class="text-sm opacity-70">负极板上的负电荷与正极板上的正电荷<span class="text-accent">相互吸引</span>，正极板上的电荷被"拉住"，几乎不会流入大地。</div>
+  <div class="text-sm">负极板上的负电荷与正极板上的正电荷<span class="text-accent">相互吸引</span>，正极板上的电荷被"拉住"，几乎不会流入大地。</div>
 </div>
 
 <div class="card mt-2 px-3 py-1.5">
-  <div class="text-sm opacity-70">把导线、电阻等其他元件接在正极和负极两端，只要<span class="text-accent-2">不构成闭合回路</span>，相互靠近的两极板间吸引力仍会“留住”电荷。</div>
+  <div class="text-sm">把导线、电阻等其他元件接在正极和负极两端，只要<span class="text-accent-2">不构成闭合回路</span>，相互靠近的两极板间吸引力仍会“留住”电荷。</div>
 </div>
 
 <div class="card card-highlight mt-2 px-3 py-1.5 text-center text-base">
@@ -289,7 +274,8 @@ layout: default
   <v-clicks>
 
   <div class="mb-1">两极板间<span class="text-red">电势差逐渐增大</span></div>
-  <div class="mb-1">电势差 → 电源电压</div>
+  <div class="mb-1">两极板间<span class="text-red">场强逐渐增大</span></div>
+  <div class="mb-1">电流正向流经电源</div>
   <div class="card-highlight rounded-lg p-2 mt-2 text-center">
     电容器<span class="text-red font-semibold">吸收</span>电能
   </div>
@@ -302,7 +288,8 @@ layout: default
   <v-clicks>
 
   <div class="mb-1">两极板间<span class="text-blue">电势差逐渐减小</span></div>
-  <div class="mb-1">电流通过用电器</div>
+  <div class="mb-1">两极板间<span class="text-blue">场强逐渐减小</span></div>
+  <div class="mb-1">电流流经用电器</div>
   <div class="card-highlight rounded-lg p-2 mt-2 text-center">
     电容器<span class="text-blue font-semibold">释放</span>电能
   </div>
@@ -320,32 +307,92 @@ layout: default
 
 </v-click>
 
+
 ---
 layout: default
 ---
 
-# 什么是"本领"？
+<div class="flex flex-col gap-4">
 
-<div class="grid grid-cols-2 gap-4 mt-4">
+<div v-click.left class="chat-msg chat-left">
+  电容器上标的电压是什么？
+  <img src="/images/陶瓷.png" alt="陶瓷电容器" class="w-20 rounded-lg" />
+
+</div>
+
+<div v-click.right class="chat-msg chat-right">
+  <span class="chat-em">额定工作电压</span>—— 电容器正常工作的最大电压
+</div>
+
+<div v-click.left class="chat-msg chat-left mt-3">
+  从闪电中，我们能得到什么启示？
+</div>
+
+<div v-click.right class="chat-msg chat-right">
+  云层与大地 → 天然电容器<br/>
+  电势差过大 → 空气<span class="text-red-400 font-semibold">击穿</span> → 闪电放电
+</div>
+
+</div>
+
+---
+layout: default
+---
+
+# 工作电压与击穿电压
+
+<v-clicks>
+
+<div class="font-bold text-xl mt-2">1. 额定工作电压</div>
+
+<div class="text-lg mt-1">
+
+电容器上标注的电压——电容器<span class="text-accent font-semibold">长期、可靠工作</span>的最大电压。
+</div>
+
+<div>
+<div class="my-3 border-t border-slate-700/50"></div>
+<div class="font-bold text-xl">2. 击穿电压</div>
+</div>
+
+<div class="text-lg mt-1">
+
+介质所能承受的<span class="text-red-400 font-semibold">极限电压</span>。超过此值，介质被<span class="text-red-400 font-semibold">击穿</span>——形成导电通路，不可逆损伤导致电容器永久损坏。
+
+</div>
+
+<div class="text-lg mt-2">
+
+因此，额定工作电压 &lt; 击穿电压，留有余量，确保电容器<span class="text-accent font-semibold">稳定运行</span>。
+
+</div>
+
+</v-clicks>
+
+---
+layout: default
+---
+
+<div class="grid grid-cols-2 gap-4 mt-2">
 
 <div class="card !py-3">
   <div class="text-lg font-semibold"><mdi-help-circle-outline class="text-accent text-xl inline-block align-middle mr-1" />质量是什么的"本领"？</div>
-  <div v-click class="text-sm opacity-70 mt-2">
+  <div v-click class="text-sm opacity-80 mt-2">
 
 改变物体运动状态<span class="text-accent">难易</span>的本领
 
-$m = \dfrac{F}{a}$
+$m = \dfrac{F}{a}$，通过衡量产生单位加速度的受力大小
 
   </div>
 </div>
 
 <div class="card !py-3">
   <div class="text-lg font-semibold"><mdi-help-circle-outline class="text-accent text-xl inline-block align-middle mr-1" />电阻是什么的"本领"？</div>
-  <div v-click class="text-sm opacity-70 mt-2">
+  <div v-click class="text-sm opacity-80 mt-2">
 
 阻碍电流通过<span class="text-accent">难易</span>的本领
 
-$R = \dfrac{U}{I}$
+$R = \dfrac{U}{I}$，通过衡量单位电流通过时两端的电压
 
   </div>
 </div>
@@ -354,7 +401,7 @@ $R = \dfrac{U}{I}$
 
 <v-click>
 
-<div class="text-2xl font-semibold mt-6 text-center"><mdi-help-circle-outline class="text-accent-2 text-2xl inline-block align-middle mr-2" />那么，电容器的本领是什么？</div>
+<div class="text-2xl font-semibold mt-2 text-center"><mdi-help-circle-outline class="text-accent-2 text-2xl inline-block align-middle mr-2" />那么，电容器的本领是什么？</div>
 
 </v-click>
 
@@ -398,7 +445,7 @@ preload: false
   class="mt-6 text-lg opacity-60"
 >
 
-<mdi-account-group-outline class="text-accent-2 text-xl mr-1" /> 请根据充放电过程的分析，讨论并尝试设计一个实验方案。
+<mdi-account-group-outline class="text-accent-2 text-xl mr-1" /> 请根据充放电过程的分析，讨论并尝试设计一个衡量思路。
 
 </div>
 
@@ -416,13 +463,29 @@ layout: default
 
 # 实验结论
 
+<div class="grid grid-cols-2 gap-4 mt-4">
+
 <v-clicks>
 
-- 同一个电容器，Q 与 U 的比值是一个<span class="text-accent font-semibold">定值</span>
+<div class="card card-highlight text-center !py-4">
+  <div class="text-xl font-semibold opacity-70">同一个电容器</div>
+  <div class="mt-2 text-accent font-bold">
 
-- 不同电容器，这个比值<span class="text-accent-2 font-semibold">不同</span>
+$Q / U$ 是定值
+
+  </div>
+</div>
+
+<div class="card card-highlight text-center !py-4">
+  <div class="text-xl font-semibold opacity-70">不同电容器</div>
+  <div class="mt-2 text-accent-2 font-bold">
+    这个比值通常不相同
+  </div>
+</div>
 
 </v-clicks>
+
+</div>
 
 ---
 layout: default
@@ -434,20 +497,16 @@ layout: default
 
 <div class="grid grid-cols-2 gap-4 mt-4">
 
-<div class="card text-center">
-  <div class="card-highlight rounded-lg p-2">
+<div class="card card-highlight rounded-lg p-1.5 text-center">
 
 $V = S \cdot h$
 
 </div>
-</div>
 
-<div class="card text-center">
-  <div class="card-highlight rounded-lg p-2">
+<div class="card card-highlight rounded-lg p-1.5 text-center">
 
 $Q = ? \cdot U$
 
-</div>
 </div>
 
 </div>
@@ -536,64 +595,6 @@ $C = \dfrac{2\times10^{-4}}{10} = 2\times10^{-5}\,\text{F} = 20\,\mu\text{F}$
 </div>
 
 </v-click>
----
-layout: default
----
-
-<div class="flex flex-col gap-4">
-
-<div v-click.left class="chat-msg chat-left">
-  电容器上标的电压是什么？
-</div>
-
-<div v-click.right class="chat-msg chat-right">
-  <span class="chat-em">额定工作电压</span>—— 电容器正常工作的最大电压
-</div>
-
-<div v-click.left class="chat-msg chat-left mt-3">
-  从闪电中，我们能得到什么启示？
-</div>
-
-<div v-click.right class="chat-msg chat-right">
-  云层与大地 → 天然电容器<br/>
-  电势差过大 → 空气<span class="text-red-400 font-semibold">击穿</span> → 闪电放电
-</div>
-
-</div>
-
----
-layout: default
----
-
-# 工作电压与击穿电压
-
-<v-clicks>
-
-<div class="font-bold text-xl mt-2">1. 额定工作电压</div>
-
-<div class="text-lg mt-1">
-
-电容器上标注的电压——电容器<span class="text-accent font-semibold">长期、可靠工作</span>的最大电压。
-</div>
-
-<div>
-<div class="my-3 border-t border-slate-700/50"></div>
-<div class="font-bold text-xl">2. 击穿电压</div>
-</div>
-
-<div class="text-lg mt-1">
-
-介质所能承受的<span class="text-red-400 font-semibold">极限电压</span>。超过此值，介质被<span class="text-red-400 font-semibold">击穿</span>——形成导电通路，不可逆损伤导致电容器永久损坏。
-
-</div>
-
-<div class="text-lg mt-2">
-
-因此，额定工作电压 &lt; 击穿电压，留有余量，确保电容器<span class="text-accent font-semibold">稳定运行</span>。
-
-</div>
-
-</v-clicks>
 
 ---
 layout: default
