@@ -94,9 +94,14 @@ const dielectricStyle = computed(() => {
 
 // ── 极板颜色：灰→红/蓝渐变 ──
 function interpolateColor(c1: string, c2: string, t: number) {
-  const p = (h: string) => ({ r: parseInt(h.slice(0,2),16), g: parseInt(h.slice(2,4),16), b: parseInt(h.slice(4,6),16) });
-  const a = p(c1), b = p(c2);
-  return `rgb(${Math.round(a.r+t*(b.r-a.r))},${Math.round(a.g+t*(b.g-a.g))},${Math.round(a.b+t*(b.b-a.b))})`;
+  const p = (h: string) => ({
+    r: parseInt(h.slice(0, 2), 16),
+    g: parseInt(h.slice(2, 4), 16),
+    b: parseInt(h.slice(4, 6), 16),
+  });
+  const a = p(c1),
+    b = p(c2);
+  return `rgb(${Math.round(a.r + t * (b.r - a.r))},${Math.round(a.g + t * (b.g - a.g))},${Math.round(a.b + t * (b.b - a.b))})`;
 }
 const plateT = computed(() => Math.max(0, Math.min(1, (U.value - 10) / 40)));
 const upperColor = computed(() => interpolateColor("475569", "ef4444", plateT.value));
@@ -116,8 +121,12 @@ function centeredPositions(centerX: number, count: number): number[] {
   const start = centerX - span / 2 + step / 2;
   return Array.from({ length: count }, (_, i) => start + i * step);
 }
-const visibleUpperCharges = computed(() => centeredPositions(upperPlateCenterX.value, chargeCount.value));
-const visibleLowerCharges = computed(() => centeredPositions(lowerPlateCenterX.value, chargeCount.value));
+const visibleUpperCharges = computed(() =>
+  centeredPositions(upperPlateCenterX.value, chargeCount.value),
+);
+const visibleLowerCharges = computed(() =>
+  centeredPositions(lowerPlateCenterX.value, chargeCount.value),
+);
 
 // Reset simulation parameters
 function resetParams() {
@@ -282,7 +291,7 @@ function resetParams() {
                 :y="upperPlateY + 12"
                 class="svg-text-sign font-extrabold select-none"
                 fill="#f87171"
-                style="font-size:13px"
+                style="font-size: 13px"
                 text-anchor="middle"
                 dominant-baseline="central"
               >
@@ -297,7 +306,7 @@ function resetParams() {
                 :y="lowerPlateY - 12"
                 class="svg-text-sign font-extrabold select-none"
                 fill="#60a5fa"
-                style="font-size:13px"
+                style="font-size: 13px"
                 text-anchor="middle"
                 dominant-baseline="central"
               >
@@ -399,10 +408,12 @@ function resetParams() {
       <div class="flex items-center justify-center gap-6 mb-3">
         <span class="inline-flex items-center gap-2 text-sm font-medium opacity-80 text-slate-300"
           ><span class="inline-block w-3.5 h-3.5 rounded-sm" style="background: #f87171"></span>
-          正电（红）</span>
+          正电（红）</span
+        >
         <span class="inline-flex items-center gap-2 text-sm font-medium opacity-80 text-slate-300"
           ><span class="inline-block w-3.5 h-3.5 rounded-sm" style="background: #60a5fa"></span>
-          负电（蓝）</span>
+          负电（蓝）</span
+        >
       </div>
 
       <!-- Controls Slider Panels Frame -->

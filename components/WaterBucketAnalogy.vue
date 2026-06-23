@@ -7,8 +7,13 @@ const dragging = ref(false);
 
 // 极板颜色：灰→红/蓝 渐变（与其他组件一致）
 function interpolateColor(c1: string, c2: string, t: number) {
-  const p = (h: string) => ({ r: parseInt(h.slice(0, 2), 16), g: parseInt(h.slice(2, 4), 16), b: parseInt(h.slice(4, 6), 16) });
-  const a = p(c1), b = p(c2);
+  const p = (h: string) => ({
+    r: parseInt(h.slice(0, 2), 16),
+    g: parseInt(h.slice(2, 4), 16),
+    b: parseInt(h.slice(4, 6), 16),
+  });
+  const a = p(c1),
+    b = p(c2);
   const r = Math.round(a.r + t * (b.r - a.r));
   const g = Math.round(a.g + t * (b.g - a.g));
   const bl = Math.round(a.b + t * (b.b - a.b));
@@ -151,20 +156,58 @@ onUnmounted(() => {
       <!-- 阀门（紧凑） -->
       <rect x="76" y="70" width="11" height="5" rx="1.5" fill="#334155" />
       <rect x="80" y="62" width="3" height="9" rx="1" fill="#475569" />
-      <rect x="72" y="59" width="19" height="4" rx="1.5" fill="#e2a846" stroke="#b8860b" stroke-width="0.6" />
+      <rect
+        x="72"
+        y="59"
+        width="19"
+        height="4"
+        rx="1.5"
+        fill="#e2a846"
+        stroke="#b8860b"
+        stroke-width="0.6"
+      />
       <circle cx="81.5" cy="61" r="3" fill="#f59e0b" stroke="#b8860b" stroke-width="0.6" />
 
       <!-- 出水弯管：无外层边框，与管身无缝衔接 -->
       <!-- 弯管从管身内部 x=103 出发，中心线 y=80 -->
-      <path d="M 103 80 L 114 80 Q 120 80 120 86 L 120 91" fill="none" stroke="#3b4f6b" stroke-width="11" stroke-linecap="round" />
-      <path d="M 104 80 L 113 80 Q 118 80 118 85 L 118 89" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="3" stroke-linecap="round" />
+      <path
+        d="M 103 80 L 114 80 Q 120 80 120 86 L 120 91"
+        fill="none"
+        stroke="#3b4f6b"
+        stroke-width="11"
+        stroke-linecap="round"
+      />
+      <path
+        d="M 104 80 L 113 80 Q 118 80 118 85 L 118 89"
+        fill="none"
+        stroke="rgba(255,255,255,0.08)"
+        stroke-width="3"
+        stroke-linecap="round"
+      />
 
       <!-- 出水嘴 -->
-      <ellipse cx="120" cy="93" rx="5.5" ry="2.5" fill="#1e293b" stroke="#334155" stroke-width="0.8" />
+      <ellipse
+        cx="120"
+        cy="93"
+        rx="5.5"
+        ry="2.5"
+        fill="#1e293b"
+        stroke="#334155"
+        stroke-width="0.8"
+      />
       <ellipse cx="120" cy="93" rx="3.5" ry="1.3" fill="#0f172a" />
 
       <!-- 水面参考虚线 -->
-      <line x1="102" y1="92" x2="315" y2="92" stroke="#64748b" stroke-width="0.6" stroke-dasharray="3,5" opacity="0.3" />
+      <line
+        x1="102"
+        y1="92"
+        x2="315"
+        y2="92"
+        stroke="#64748b"
+        stroke-width="0.6"
+        stroke-dasharray="3,5"
+        opacity="0.3"
+      />
 
       <!-- 水滴 -->
       <g v-if="animating && level < 0.9">
@@ -174,8 +217,22 @@ onUnmounted(() => {
           <animate attributeName="r" from="2.8" to="1.3" dur="0.9s" repeatCount="indefinite" />
         </circle>
         <circle cx="120" cy="103" r="1.8" fill="#60a5fa" opacity="0.25">
-          <animate attributeName="cy" from="101" to="220" dur="0.9s" begin="0.22s" repeatCount="indefinite" />
-          <animate attributeName="opacity" from="0.25" to="0" dur="0.9s" begin="0.22s" repeatCount="indefinite" />
+          <animate
+            attributeName="cy"
+            from="101"
+            to="220"
+            dur="0.9s"
+            begin="0.22s"
+            repeatCount="indefinite"
+          />
+          <animate
+            attributeName="opacity"
+            from="0.25"
+            to="0"
+            dur="0.9s"
+            begin="0.22s"
+            repeatCount="indefinite"
+          />
         </circle>
       </g>
 
@@ -235,8 +292,32 @@ onUnmounted(() => {
         stroke-linecap="round"
       />
 
-      <text v-for="x in chargeXs" :key="'+'+x" :x="x" y="108" style="font-size:14px" font-weight="950" fill="#f87171" text-anchor="middle" dominant-baseline="central">+</text>
-      <text v-for="x in chargeXs" :key="'-'+x" :x="x" y="145" style="font-size:14px" font-weight="950" fill="#60a5fa" text-anchor="middle" dominant-baseline="central">−</text>
+      <text
+        v-for="x in chargeXs"
+        :key="'+' + x"
+        :x="x"
+        y="108"
+        style="font-size: 14px"
+        font-weight="950"
+        fill="#f87171"
+        text-anchor="middle"
+        dominant-baseline="central"
+      >
+        +
+      </text>
+      <text
+        v-for="x in chargeXs"
+        :key="'-' + x"
+        :x="x"
+        y="145"
+        style="font-size: 14px"
+        font-weight="950"
+        fill="#60a5fa"
+        text-anchor="middle"
+        dominant-baseline="central"
+      >
+        −
+      </text>
 
       <!-- U：从两极板中间向上下对称展开 -->
       <line
@@ -282,10 +363,12 @@ onUnmounted(() => {
     <div class="flex items-center justify-center gap-6 mt-2">
       <span class="inline-flex items-center gap-2 text-sm font-medium opacity-80"
         ><span class="inline-block w-3.5 h-3.5 rounded-sm" style="background: #f87171"></span>
-        正电（红）</span>
+        正电（红）</span
+      >
       <span class="inline-flex items-center gap-2 text-sm font-medium opacity-80"
         ><span class="inline-block w-3.5 h-3.5 rounded-sm" style="background: #60a5fa"></span>
-        负电（蓝）</span>
+        负电（蓝）</span
+      >
     </div>
   </div>
 </template>

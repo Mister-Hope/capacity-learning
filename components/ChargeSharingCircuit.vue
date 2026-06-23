@@ -245,7 +245,16 @@ onUnmounted(() => {
         <line x1="52" y1="106" x2="68" y2="106" stroke="#475569" stroke-width="5" />
         <line x1="44" y1="114" x2="76" y2="114" stroke="#ef4444" stroke-width="3" />
         <line x1="52" y1="122" x2="68" y2="122" stroke="#475569" stroke-width="5" />
-        <text x="24" y="22" font-size="14" font-weight="950" font-family="Times New Roman, STIX Two Text, serif" font-style="italic" fill="#ef4444" text-anchor="start">
+        <text
+          x="24"
+          y="22"
+          font-size="14"
+          font-weight="950"
+          font-family="Times New Roman, STIX Two Text, serif"
+          font-style="italic"
+          fill="#ef4444"
+          text-anchor="start"
+        >
           E=8V
         </text>
 
@@ -350,7 +359,14 @@ onUnmounted(() => {
             :stroke="!s2Closed ? '#94a3b8' : '#475569'"
             stroke-width="2.5"
           />
-          <text x="242" y="175" font-size="15" font-weight="950" fill="#94a3b8" text-anchor="middle">
+          <text
+            x="242"
+            y="175"
+            font-size="15"
+            font-weight="950"
+            fill="#94a3b8"
+            text-anchor="middle"
+          >
             3
           </text>
         </g>
@@ -366,7 +382,14 @@ onUnmounted(() => {
             :stroke="s2Closed ? '#34d399' : '#475569'"
             stroke-width="2.5"
           />
-          <text x="205" y="184" font-size="15" font-weight="950" fill="#34d399" text-anchor="middle">
+          <text
+            x="205"
+            y="184"
+            font-size="15"
+            font-weight="950"
+            fill="#34d399"
+            text-anchor="middle"
+          >
             4
           </text>
         </g>
@@ -429,8 +452,32 @@ onUnmounted(() => {
           >
             C₂
           </text>
-          <text v-for="x in chargeXsC2" :key="'+'+x" :x="x" y="115" style="font-size:10px" font-weight="950" fill="#f87171" text-anchor="middle" dominant-baseline="central">+</text>
-          <text v-for="x in chargeXsC2" :key="'-'+x" :x="x" y="125" style="font-size:10px" font-weight="950" fill="#60a5fa" text-anchor="middle" dominant-baseline="central">−</text>
+          <text
+            v-for="x in chargeXsC2"
+            :key="'+' + x"
+            :x="x"
+            y="115"
+            style="font-size: 10px"
+            font-weight="950"
+            fill="#f87171"
+            text-anchor="middle"
+            dominant-baseline="central"
+          >
+            +
+          </text>
+          <text
+            v-for="x in chargeXsC2"
+            :key="'-' + x"
+            :x="x"
+            y="125"
+            style="font-size: 10px"
+            font-weight="950"
+            fill="#60a5fa"
+            text-anchor="middle"
+            dominant-baseline="central"
+          >
+            −
+          </text>
         </g>
 
         <!-- S1 → C₁ 导线 -->
@@ -470,8 +517,32 @@ onUnmounted(() => {
           >
             C₁
           </text>
-          <text v-for="x in chargeXsC1" :key="'+'+x" :x="x" y="115" style="font-size:10px" font-weight="950" fill="#f87171" text-anchor="middle" dominant-baseline="central">+</text>
-          <text v-for="x in chargeXsC1" :key="'-'+x" :x="x" y="125" style="font-size:10px" font-weight="950" fill="#60a5fa" text-anchor="middle" dominant-baseline="central">−</text>
+          <text
+            v-for="x in chargeXsC1"
+            :key="'+' + x"
+            :x="x"
+            y="115"
+            style="font-size: 10px"
+            font-weight="950"
+            fill="#f87171"
+            text-anchor="middle"
+            dominant-baseline="central"
+          >
+            +
+          </text>
+          <text
+            v-for="x in chargeXsC1"
+            :key="'-' + x"
+            :x="x"
+            y="125"
+            style="font-size: 10px"
+            font-weight="950"
+            fill="#60a5fa"
+            text-anchor="middle"
+            dominant-baseline="central"
+          >
+            −
+          </text>
         </g>
 
         <!-- 电压表 V（与 C₁ 并联） -->
@@ -493,7 +564,6 @@ onUnmounted(() => {
             V
           </text>
         </g>
-
       </svg>
 
       <!-- 电压表读数 -->
@@ -506,10 +576,12 @@ onUnmounted(() => {
       <div class="flex items-center justify-center gap-3 mb-2">
         <span class="inline-flex items-center gap-2 text-sm font-medium opacity-80"
           ><span class="inline-block w-3.5 h-3.5 rounded-sm" style="background: #f87171"></span>
-          正电（红）</span>
+          正电（红）</span
+        >
         <span class="inline-flex items-center gap-2 text-sm font-medium opacity-80"
           ><span class="inline-block w-3.5 h-3.5 rounded-sm" style="background: #60a5fa"></span>
-          负电（蓝）</span>
+          负电（蓝）</span
+        >
       </div>
     </div>
 

@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "slidev",
     "build": "slidev build",
+    "lint": "oxfmt",
     "export": "slidev export"
   },
   "dependencies": {
@@ -16,5 +17,12 @@
   },
   "devDependencies": {
     "oxfmt": "^0.54.0"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "11.8.0",
+      "onFail": "download"
+    }
   }
 }
