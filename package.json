@@ -16,12 +16,12 @@
     "@slidev/theme-default": "^0.25.0"
   },
   "devDependencies": {
-    "oxfmt": "^0.54.0"
+    "oxfmt": "^0.56.0"
   },
   "devEngines": {
     "packageManager": {
       "name": "pnpm",
-      "version": "11.8.0",
+      "version": "11.9.0",
       "onFail": "download"
     }
   }
